@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Audrey Woodrow</title>
+<meta name="description" content="Audrey Woodrow — Computer Science student at Stanford University. Software engineering, machine learning, and computer science education." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #555;
+    --faint: #767676;
+    --line: #e8e8ea;
+    --band: #fafafa;
+    --accent: #2563eb;
+    --radius: 16px;
+    --maxw: 760px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+  header { padding: 64px 0 8px; }
+  .id { display: flex; gap: 28px; align-items: flex-start; }
+  .avatar {
+    flex: 0 0 auto;
+    width: 116px; height: 116px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f0d9e4;
+    background: #f3f4f6;
+    display: grid; place-items: center;
+    font-size: 34px; font-weight: 600; color: #9aa0a6; letter-spacing: 1px;
+  }
+  h1 { font-size: 1.6rem; font-weight: 700; margin: 4px 0 6px; letter-spacing: -0.01em; }
+  .role { color: var(--muted); font-size: 0.95rem; margin: 0 0 2px; }
+  .tagline { color: var(--muted); font-size: 0.95rem; margin: 0 0 12px; }
+  .contact { display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.875rem; align-items: center; }
+  .contact span.mail { color: var(--faint); }
+  .contact a { color: var(--muted); }
+  .contact a:hover { color: var(--accent); }
+  .bio { padding: 28px 0 8px; }
+  .bio p { margin: 0 0 18px; }
+  section.band { background: var(--band); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 36px; padding: 40px 0; }
+  section.plain { padding: 40px 0 0; }
+  h2 { font-size: 1.25rem; font-weight: 600; margin: 0 0 22px; letter-spacing: -0.01em; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .cards.two { grid-template-columns: repeat(2, 1fr); }
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+  }
+  .card h3 { margin: 0 0 4px; font-size: 1rem; font-weight: 600; }
+  .card .sub { margin: 0 0 10px; font-size: 0.875rem; color: var(--accent); }
+  .card .meta { margin: 0; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); }
+  .card p.body { margin: 10px 0 0; font-size: 0.875rem; color: var(--muted); line-height: 1.55; }
+  .entry { padding: 0 0 26px; }
+  .entry:last-child { padding-bottom: 0; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .entry h3 { margin: 0; font-size: 1rem; font-weight: 600; }
+  .entry .when { font-size: 0.8125rem; color: var(--faint); white-space: nowrap; }
+  .entry .org { margin: 2px 0 8px; font-size: 0.875rem; color: var(--muted); }
+  .entry ul { margin: 8px 0 0; padding-left: 18px; }
+  .entry li { margin: 0 0 6px; font-size: 0.9375rem; color: var(--muted); }
+  .stack { margin: 4px 0 0; font-size: 0.8125rem; color: var(--faint); }
+  .skills dt { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); margin-top: 16px; }
+  .skills dt:first-child { margin-top: 0; }
+  .skills dd { margin: 4px 0 0; font-size: 0.9375rem; color: var(--muted); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .chips li { font-size: 0.875rem; color: var(--muted); background: var(--band); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; }
+  footer { margin-top: 48px; border-top: 1px solid var(--line); padding: 28px 0 56px; }
+  .foot-inner { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; font-size: 0.875rem; color: var(--faint); }
+  .foot-inner a { color: var(--muted); }
+  @media (max-width: 720px) {
+    header { padding-top: 40px; }
+    .id { flex-direction: column; gap: 18px; }
+    .avatar { width: 96px; height: 96px; }
+    .cards, .cards.two { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="id">
+      <!-- To use a photo: replace the div below with <img class="avatar" src="headshot.jpg" alt="Audrey Woodrow" /> -->
+      <div class="avatar" aria-hidden="true">AW</div>
+      <div>
+        <h1>Audrey Woodrow</h1>
+        <p class="role">B.S. Computer Science, Minor in Education &middot; Stanford University</p>
+        <p class="tagline">Building small, local-first software &mdash; and teaching people to build it too</p>
+        <div class="contact">
+          <span class="mail">audreydw at stanford dot edu</span>
+          <a href="https://linkedin.com/in/audrey-woodrow">LinkedIn</a>
+          <a href="https://github.com/audreydwoodrow">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap bio">
+  <p>I am an undergraduate studying Computer Science at Stanford, with a minor in Education, graduating in 2029. My work sits where those two things meet: building software that is genuinely useful, and helping other people learn to build it.</p>
+
+  <p>As a section leader for CS198, I teach a weekly section of twelve students in Stanford's introductory CS sequence and grade their assignments and exams. Most of the job is coaching people through debugging and program design &mdash; recursion, algorithmic analysis, object-oriented programming, core data structures &mdash; and most of the skill is knowing when to answer a question and when to hand it back.</p>
+
+  <p>Outside of coursework I build things for problems I actually have: a neural network that predicts how good a ski day will be, a dashboard that pulls my coursework into one calendar, an outfit matcher that runs entirely on my own machine. They are small on purpose. I care about software that people can read, run, and keep.</p>
+</div>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Product Engineering Intern</h3>
+        <span class="when">Summer 2026</span>
+      </div>
+      <p class="org">AwardSpring &middot; Chicago, IL</p>
+      <ul>
+        <li>Shipped production front-end features to a scholarship management platform serving 600+ institutions.</li>
+        <li>Authored the company's public developer API documentation &mdash; 18 endpoints across six resources, generated from the spec so the reference updates with the code instead of by hand.</li>
+        <li>Designed and deployed an automated contact-page routing system, cutting 5+ hours of manual triage per week.</li>
+        <li>Automated recurring data-warehouse updates and a pricing-analysis market research tool in Python and SQL.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Data Analyst Intern</h3>
+        <span class="when">Summer 2025</span>
+      </div>
+      <p class="org">Aspen Technology Labs &middot; Aspen, CO</p>
+      <ul>
+        <li>Grew the company's global corporate job-vacancy dataset by 22% (+100,000 companies) by sourcing, evaluating, and integrating new external data providers.</li>
+        <li>Wrote Python and SQL pipelines to ingest, clean, and validate the acquired data.</li>
+        <li>Prototyped agentic AI workflows with the OpenAI API and built reporting views in Looker.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="plain">
+  <div class="wrap">
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3><a href="https://github.com/audreydwoodrow/ski-condition-rating-model">Ski Day Rating Predictor</a></h3>
+      </div>
+      <p class="stack">Python &middot; PyTorch &middot; pandas &middot; NumPy</p>
+      <ul>
+        <li>Trained a feedforward neural network on 6,490 survey ratings from 375 skiers to predict day-ratings from eight conditions: lift wait, ticket price, temperature, share of slopes open, weather, wind, weekday, and vacation week.</li>
+        <li>Built up deliberately from a hand-worked linear model so every calculation stays legible, and shipped a CLI that returns a predicted rating for any set of conditions.</li>
+        <li>Held out a test set until the very end and reported the result honestly: an R&sup2; of 0.12 means conditions explain some of a rating, not most of it.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3><a href="https://github.com/audreydwoodrow/school-dashboard">Canvas Course Dashboard</a></h3>
+      </div>
+      <p class="stack">Python &middot; Flask &middot; SQLite &middot; JavaScript &middot; Canvas LMS REST API</p>
+      <ul>
+        <li>Built a dashboard that authenticates against the Canvas LMS API and consolidates assignments, deadlines, and announcements across every enrolled course into a single calendar and task list.</li>
+        <li>Added a weekly task board with subtasks and drag-and-drop, plus a recurring-event calendar backed by SQLite.</li>
+        <li>Evaluated direct integration with university grade portals and rejected it on security and complexity grounds, adding manual score and class-median entry instead.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3><a href="https://github.com/audreydwoodrow/closet-stylist">Closet Stylist</a></h3>
+      </div>
+      <p class="stack">JavaScript &middot; Node &middot; Anthropic API</p>
+      <ul>
+        <li>Upload an inspiration photo and it suggests outfits from clothes you already own and have tagged yourself.</li>
+        <li>Runs entirely on your own machine: photos and tags stay as plain files on disk, and the app shows a cost estimate before every API call.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Teaching &amp; Leadership</h2>
+    <div class="cards two">
+      <div class="card">
+        <h3>CS198</h3>
+        <p class="sub">Section Leader, Introductory CS</p>
+        <p class="meta">Stanford &middot; May 2026 &ndash; Present</p>
+        <p class="body">Teach a weekly section of 12 students and grade assignments and exams. Coach students through debugging and program design across recursion, algorithmic analysis, object-oriented programming, and core data structures in Python and C++.</p>
+      </div>
+      <div class="card">
+        <h3>Girls in Motion</h3>
+        <p class="sub">Founder</p>
+        <p class="meta">Aspen, CO &middot; Summer 2024</p>
+        <p class="body">Analyzed IB enrollment data to find where girls leave the physics track, surveyed teachers nationwide on interventions, and presented to the school board, which approved a standing student&ndash;teacher committee. Founded and taught a physics camp for middle-school girls.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="plain">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt>
+      <dd>Python &middot; C++ &middot; C &middot; JavaScript &middot; SQL &middot; HTML/CSS</dd>
+      <dt>Frameworks &amp; Tools</dt>
+      <dd>PyTorch &middot; pandas &middot; NumPy &middot; Flask &middot; Git &middot; REST APIs &middot; OpenAI and Anthropic APIs &middot; Looker</dd>
+      <dt>Spoken</dt>
+      <dd>French (bilingual) &middot; Spanish (conversational)</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="plain">
+  <div class="wrap">
+    <h2>Around campus</h2>
+    <ul class="chips">
+      <li>Bridge Peer Counseling Center &mdash; Outreach Coordinator &amp; Staffer</li>
+      <li>Stanford Outdoor Outreach Program &mdash; Outreach Coordinator</li>
+      <li>Stanford FashionX &mdash; Designer</li>
+      <li>Stanford Education Society &mdash; Communications Leader</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>audreydw at stanford dot edu</span>
+    <span>
+      <a href="https://linkedin.com/in/audrey-woodrow">LinkedIn</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://github.com/audreydwoodrow">GitHub</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
