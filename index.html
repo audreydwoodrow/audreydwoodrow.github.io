@@ -141,7 +141,7 @@
       <p class="calls-label">Decisions</p>
       <ul class="calls">
         <li>Looked hard at integrating directly with university grade portals and turned it down. The security surface and the complexity were not worth what it added, so scores and class medians are entered by hand instead.</li>
-        <li>Added a class median field next to every grade, because the number that actually tells you something is usually the one Canvas hides.</li>
+        <li>Added a class median field next to every grade. Medians almost always turn up somewhere else, in an email or a separate announcement, and I wanted to read mine next to the score instead of going looking for it.</li>
         <li>The access token is checked against the Canvas API before it is saved, so a typo fails immediately instead of silently returning nothing.</li>
         <li>Everything stays on the machine it runs on: a local SQLite file, a local config file, and a server bound to localhost only.</li>
       </ul>
